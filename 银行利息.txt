@@ -1,0 +1,16 @@
+#include<stdio.h >
+#define a 12*1.875/100//利息
+int main()
+{
+	int i = 0;
+	double x = 0;
+	//从公式上看就是：((（x*(1*a)-1000）*(1+a)-1000)*(1+a)-1000)...=0
+	while (i < 5)
+	{
+		x = (x + 1000) /(1+ a);//不要忘了1
+		i++;
+	}
+
+	printf("He must save %.2f at the first year.\n",x);
+	return 0;
+}
