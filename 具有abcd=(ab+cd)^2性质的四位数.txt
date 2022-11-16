@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main() {
+    int a, b, c;
+    printf("There are following numbers:\n");
+    for (a = 1000;a < 10000;a++) {
+        b = a / 100;
+        c = a % 100;
+        if ((b + c) * (b + c) == a) {
+            printf("%d  ", a);
+        }
+    }
+}
