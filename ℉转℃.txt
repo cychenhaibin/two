@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    float C,F;
+    for(F=0;F<=300;F+=20)
+    {
+        C = 5.0/9 *(F-32);
+        printf("%4.0f%10.1f\n",F,C);
+    }
+    
+}
