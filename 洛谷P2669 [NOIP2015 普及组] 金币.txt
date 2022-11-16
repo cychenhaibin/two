@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int n,i,j,sum=0,cnt=0;      //n为键盘录入天数，i为依次循环天数
+	scanf("%d",&n);
+	for(i=1;i<=n;++i){          
+		for(j=1;j<=i;++j){      //计算每个括号内的数据，固定一个i，计算一个括号
+			sum+=i;
+			cnt++;
+			if(cnt==n) 
+			printf("%d",sum);   //输出骑士总共可获得的金币数
+		}	
+	}
+	return 0;
+} 
