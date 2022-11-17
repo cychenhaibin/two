@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	if(a == 0)
+	{
+		printf("0");
+		return 0;
+	}
+	if(a < 0)
+	{
+		a = -a;
+		putchar('-');
+	}
+	while(a % 10 == 0)
+		a /= 10;
+	while(a)
+	{
+		printf("%d", a % 10);
+		a /= 10;
+	}
+	return 0;
+}
