@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+
+int zhishu(int i){
+    int j;
+    if(i<2)
+    return 0;
+    if(i==2)
+    return 1;
+    for(j=2;j<=sqrt(i);j++){
+        if(i%j==0)//把小于根号i的所有数都除一遍，能被除尽就不是质数
+        return 0;
+    }
+    return 1;
+}
+int main(){
+    int count,L,sum,i;               
+    scanf("%d",&L);
+    sum=0;
+    count=0;
+    for(i=0;;i++){              //从0开始依次检索
+        if(sum+i>L)            //如果数加起来大于L，直接退出
+        break; 
+        if(zhishu(i)){            //质数判断
+            printf("%d\n",i);  
+            count++;
+            sum+=i;
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
