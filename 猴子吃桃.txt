@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+    int sum,i;
+    sum=1;
+    for(i=10;i>1;i--){
+        sum=2*(sum+1);
+    }
+    printf("桃子总数=%d\n",sum);
+    return 0;
+}
