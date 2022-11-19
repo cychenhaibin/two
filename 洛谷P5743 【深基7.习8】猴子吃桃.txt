@@ -1,0 +1,12 @@
+#include <stdio.h>
+int n;
+int func(int k) { // 计算第k天有几颗桃子
+	if (k == n) return 1;
+	return (func(k + 1) + 1) * 2;
+}
+
+int main() {
+	scanf("%d", &n);
+	printf("%d", func(1));
+	return 0;
+}
