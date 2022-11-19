@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define MAX 15
+char node[] = "0123456789X";             //识别码序列，因为ISBN码是字符串，所以识别码序列也用字符串，方便比较
+int main() {
+    char IS[MAX];
+    int t, i, sum;                                 //t为权重，sum为求的和
+    gets(IS);                                       //读入ISBN号码
+    for (i = t = sum = 0; i < 11; i++) {
+        if (IS[i] != '-') {                            //每找到一个数字，由题意知权重要加一，即t++
+            t++;
+            sum += (IS[i] - '0') * t;            //求和
+        }
+    }
+ 
+    if (IS[12] == node[sum % 11])              //如果符合条件就输出Right
+        printf("Right");
+   
+    else {                                          //否则就把ISBN最后一位识别码纠正过来，并输出正确的
+        IS[12] = node[sum % 11];
+        printf("%s", IS);
+    }
+    return 0;
+}
