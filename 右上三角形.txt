@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() 
+{
+	for (int i = 1; i <= 5; i++)
+	{
+		for (int j = 1; j <= i; j++)//相比前两个多加了个for循环
+		{					 //相当于输出了一个左下空格三角形			
+			printf(" ");
+		}
+		for (int n = 0; n <= 5 - i; n++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ *****
+  ****
+   ***
+    **
+     *
+
+--------------------------------
+Process exited after 0.06196 seconds with return value 0
+请按任意键继续. . .
+
+
