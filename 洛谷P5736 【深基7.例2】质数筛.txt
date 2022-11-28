@@ -1,0 +1,19 @@
+#include<stdio.h>
+int Isprime(int a){
+    if(a<2) return 0;
+    else{
+        for(int i=2;i*i<=a;i++){
+            if(a%i==0) return 0;
+        }
+    }
+    return 1;
+}
+int main(){
+    int n,a;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&a);
+        if(Isprime(a)) printf("%d ",a);
+    }
+    return 0;
+}
